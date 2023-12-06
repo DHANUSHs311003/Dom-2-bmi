@@ -11,90 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <title>BMI Calculator</title>
-    <style>
-        #parent{
-            width: 50%;
-            margin: auto;
-            height: auto;
-            margin-top: 120px;
-            background-color:#fcfafa;
-            padding: 15px;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-            border-radius: 20px;
-            
-        }
-        .child-1{
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
-            width: 100%;
-            margin: auto;
-            background-color: #6e71cc;
-            color:#ffdb66;
-            padding: 1px;
-            border-radius: 15px;
-        }
-        #chid{
-            text-align: center;
-            font-family: 'Open Sans', sans-serif;
-            width: 80%;
-            margin: auto;
-        }
-        #flex {
-            display: flex;
-            justify-content: center;
-            justify-content: space-evenly;
-        }
-        .para {
-            font-family: 'Poppins', sans-serif;
-            font-size: 18px;
-            color:#ffdb66;
-            background-color: #1a9fbd;
-            padding: 20px;
-            border-radius: 15px;
-
-        }
-
-        .input {
-            height: 30px;
-            width: 250px;
-            margin-left: 25px;
-            border-color:#ffdb66  ;
-            border-radius: 10px;
-            font-size: large;
-        }
-        .input:hover {
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-            transform: scale(1.1);
-
-        }
-
-        #butt {
-            border: 0;
-            background-color: #ED0331;
-            color: #FFFFFF;
-            padding: 10px;
-            font-family: 'Poppins', sans-serif;
-            border-radius: 20px;
-            margin-top: 50px;
-            position: relative;
-            left: 320px;
-
-        }
-        #butt:hover {
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-            transform: scale(0.9);
-       
-
-        }
-        
-        #state {
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
-            width: 100%;
-            color: #0A0103;
-        }
-
-    </style>
 </head>
 <body>
     <div id="parent">
@@ -123,29 +39,5 @@
     </div>
     
 </body>
+<script src="./main.js"></script>
 </html>
-<script>
-     let button = document.querySelector("#butt");
-     let output=document.querySelector("#state");
-     button.addEventListener("click",function(){
-        let input1=document.querySelector("#inp1").value;
-        let input2=document.querySelector("#inp2").value;
-       let bmi=(input1) / ((input2*input2))*10000;
-       if(bmi <= 18.4) {
-          output.textContent="Your BMI is "+bmi+", which means your UnderWeight, so eat litle more but healthy food 🍲🥗🥙";
-       }
-       else if(bmi >= 18.5 && bmi <= 24.9) {
-        output.textContent="Your BMI is "+bmi+", which means your NormalWeight, 😍😍";
-       }
-       else if(bmi >= 25 && bmi <= 29.9) {
-        output.textContent="Your BMI is "+bmi+", which means your OverWeight, do some exercise 🤸‍♂️";
-       }
-       else if (bmi >= 30) {
-        output.textContent="Your BMI is "+bmi+", which means your Obese, do some exercise 🏋️" ;
-       }
-       else {
-        output.textContent="Please enter your weight and height ✌️✌️";
-       }
-
-     })
-</script>
